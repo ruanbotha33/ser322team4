@@ -16,6 +16,31 @@
         <!--[if gt IE 8]><!-->
             <link rel="stylesheet" href="css/layouts/side-menu.css">
         <!--<![endif]-->
+        
+        <script>
+function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtshow").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtshow").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","getuser.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+        
 </head>
 <body>
 
@@ -38,8 +63,7 @@
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">New Volunteer</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Lookup</a></li>
-
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Assign</a></li>
             </ul>
         </div>
     </div>
@@ -50,7 +74,7 @@
         </div>
 
         <div class="content">
-   			<form class="pure-form pure-form-aligned">
+   			<form class="pure-form pure-form-aligned" onSubmit="showUser(document.getElementById('firstname').value)">
     <fieldset>
         <div class="pure-control-group">
             <label for="firstname">First Name</label>
@@ -95,6 +119,8 @@
       
     </fieldset>
 	</form>
+    
+    <div id="txtshow"><b>Person info will be listed here...</b></div>
         </div>
     </div>
 </div>
