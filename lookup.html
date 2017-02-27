@@ -18,11 +18,11 @@
         <!--<![endif]-->
         
         <script>
-function showUser(str) {
-    if (str == "") {
-        document.getElementById("txtshow").innerHTML = "";
-        return;
-    } else { 
+		
+		window.onload = showUser();
+		
+		function showUser() {
+
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
@@ -35,10 +35,10 @@ function showUser(str) {
                 document.getElementById("txtshow").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","getuser.php?q="+str,true);
+        xmlhttp.open("GET","getallusers.php?q=",true);
         xmlhttp.send();
+		
     }
-}
 </script>
         
 </head>
@@ -64,63 +64,20 @@ function showUser(str) {
                 <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">New Volunteer</a></li>
                 <li class="pure-menu-item"><a href="lookup.html" class="pure-menu-link">Lookup</a></li>
                 <li class="pure-menu-item"><a href="assign.html" class="pure-menu-link">Assign</a></li>
-                <li class="pure-menu-item"><a href="queries.html" class="pure-menu-link">Queries</a></li>
+                <li class="pure-menu-item"><a href="assign.html" class="pure-menu-link">Queries</a></li>
             </ul>
         </div>
     </div>
 
     <div id="main">
         <div class="header">
-            <h1>New Volunteer</h1>
+            <h1>Volunteers</h1>
         </div>
-
         <div class="content">
-   			<form class="pure-form pure-form-aligned" onSubmit="showUser(document.getElementById('firstname').value)">
-    <fieldset>
-        <div class="pure-control-group">
-            <label for="firstname">First Name</label>
-            <input id="firstname" type="text" placeholder="First Name">
-            <!--<span class="pure-form-message-inline">This is a required field.</span>-->
-        </div>
 
-        <div class="pure-control-group">
-            <label for="lastname">Password</label>
-            <input id="lastname" type="text" placeholder="Last Name">
+    
+    <div id="txtshow"><b>Loading please wait....</b></div>
         </div>
-
-        <div class="pure-control-group">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="Email Address">
-        </div>
-
-        <div class="pure-control-group">
-            <label for="phonenumber"> Phone Number</label>
-            <input id="phonenumber" type="number" placeholder="Phone Number">
-        </div>
-         <div class="pure-control-group">
-            <label for="city"> City</label>
-            <input id="city" type="text" placeholder="City">
-        </div>
-         <div class="pure-control-group">
-            <label for="State"> State</label>
-            <input id="State" type="text" placeholder="State">
-        </div>
-
-
-        <div class="pure-controls">
-        <!--
-            <label for="cb" class="pure-checkbox">
-                <input id="cb" type="checkbox"> I've read the terms and conditions
-            </label>
-			   MIGHT WANT TO USE THIS LATER     
--->  
-            <button type="submit" class="pure-button pure-button-primary">Submit</button>
-        </div>
-        
-      
-    </fieldset>
-	</form>
-
     </div>
 </div>
 

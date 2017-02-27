@@ -18,7 +18,7 @@
         <!--<![endif]-->
         
         <script>
-function showUser(str) {
+/*function showUser(str) {
     if (str == "") {
         document.getElementById("txtshow").innerHTML = "";
         return;
@@ -38,7 +38,7 @@ function showUser(str) {
         xmlhttp.open("GET","getuser.php?q="+str,true);
         xmlhttp.send();
     }
-}
+}*/
 </script>
         
 </head>
@@ -71,60 +71,13 @@ function showUser(str) {
 
     <div id="main">
         <div class="header">
-            <h1>New Volunteer</h1>
+            <h1>Pre Built Queries</h1>
         </div>
 
         <div class="content">
-   			<form class="pure-form pure-form-aligned" onSubmit="showUser(document.getElementById('firstname').value)">
-    <fieldset>
-        <div class="pure-control-group">
-            <label for="firstname">First Name</label>
-            <input id="firstname" type="text" placeholder="First Name">
-            <!--<span class="pure-form-message-inline">This is a required field.</span>-->
-        </div>
-
-        <div class="pure-control-group">
-            <label for="lastname">Password</label>
-            <input id="lastname" type="text" placeholder="Last Name">
-        </div>
-
-        <div class="pure-control-group">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="Email Address">
-        </div>
-
-        <div class="pure-control-group">
-            <label for="phonenumber"> Phone Number</label>
-            <input id="phonenumber" type="number" placeholder="Phone Number">
-        </div>
-         <div class="pure-control-group">
-            <label for="city"> City</label>
-            <input id="city" type="text" placeholder="City">
-        </div>
-         <div class="pure-control-group">
-            <label for="State"> State</label>
-            <input id="State" type="text" placeholder="State">
-        </div>
-
-
-        <div class="pure-controls">
-        <!--
-            <label for="cb" class="pure-checkbox">
-                <input id="cb" type="checkbox"> I've read the terms and conditions
-            </label>
-			   MIGHT WANT TO USE THIS LATER     
--->  
-            <button type="submit" class="pure-button pure-button-primary">Submit</button>
-        </div>
         
-      
-    </fieldset>
-	</form>
-
-    </div>
-</div>
-
-
+        
+		</div>
 
 
 <script src="js/ui.js"></script>
