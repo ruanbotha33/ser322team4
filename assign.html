@@ -18,11 +18,10 @@
         <!--<![endif]-->
         
         <script>
-/*function showUser(str) {
-    if (str == "") {
-        document.getElementById("txtshow").innerHTML = "";
-        return;
-    } else { 
+		
+		window.onload = showUser();
+		
+		function showUser() {
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
@@ -35,15 +34,15 @@
                 document.getElementById("txtshow").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","getuser.php?q="+str,true);
+        xmlhttp.open("GET","assign.php?q=",true);
         xmlhttp.send();
+		
     }
-}*/
 </script>
         
 </head>
 <body>
-
+<form method = "post" action = "data.php">
 
 
 
@@ -64,23 +63,31 @@
                 <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">New Volunteer</a></li>
                 <li class="pure-menu-item"><a href="lookup.html" class="pure-menu-link">Lookup</a></li>
                 <li class="pure-menu-item"><a href="assign.html" class="pure-menu-link">Assign</a></li>
-                <li class="pure-menu-item"><a href="queries.html" class="pure-menu-link">Queries</a></li>
+                <li class="pure-menu-item"><a href="assign.html" class="pure-menu-link">Queries</a></li>
             </ul>
         </div>
     </div>
 
     <div id="main">
         <div class="header">
-            <h1>Assign a Volunteer</h1>
+            <h1>Volunteers</h1>
         </div>
-
         <div class="content">
-        
-        
-		</div>
+
+    
+    <div id="txtshow"><b>Loading please wait....</b></div>
+        </div>
+    </div>
+</div>
 
 
 <script src="js/ui.js"></script>
-
+        <br /><br />
+        <br /><span class = "prompt">
+ <br /></span>
+        <!-- create a submit button -->
+        <input type = "submit" value = "Register" />
+    </div>
+</form>
 </body>
 </html>
