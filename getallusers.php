@@ -53,6 +53,7 @@ echo "<table id='myTable' class='display nowrap dataTable dtr-inline' data-searc
 <th>Home State</th>
 <th>Total Hours</th>
 </tr>";
+
 while($row = mysqli_fetch_array($result)) {
     echo "<tr>";
     echo "<td>" . $row['Name'] . "</td>";

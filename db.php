@@ -36,16 +36,15 @@ public $host;
             echo mysql_error();
         }
     }
-    public function insert($fname,$lname,$email,$phone,$city,$state)
+    public function insert($name,$age,$email,$phone,$city,$state)
     {
     	//Edit this to match your query
-        $sql=mysql_query("INSERT INTO volunteers(name, number) VALUES('$name', '$number')");
+        $sql=mysql_query("INSERT INTO volunteers(Name,Age,email,phoneNumber,homeCity,homeState,totalHours) VALUES('$name', '$age','$email','$phone','$city','$state')");
         if(!$sql)
         {
             echo mysql_error();
         }
     }
-}
 }
 ?>
 

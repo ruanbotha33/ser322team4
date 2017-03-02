@@ -430,5 +430,93 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
+<br />Volunteers who have the most hours: <br />
+<?php
+$q = intval($_GET['q']);
+$con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
+if (!$con) {
+  echo "mysqli_error($con)";
+    die('Could not connect: ' . mysqli_error($con));
+}
+mysqli_select_db($con,"id899930_volunteers");
+$sql="SELECT * FROM id899930_volunteers.volunteers ORDER BY totalHours DESC";
+$result = mysqli_query($con,$sql);
+//echo "Connected successfully";
+/*?>echo "
+<div id='filter' class='dataTables_filter'
+<label>
+Search: <input type='search' class placeholder aria-controls='search'>
+</label>
+<div>
+";<?php */
+echo "<table id='myTable' class='display nowrap dataTable dtr-inline' data-searching='true' data-role ='datatable'>
+<tr>
+<th>Name</th>
+<th>ID</th>
+<th>Age</th>
+<th>email</th>
+<th>phoneNumber</th>
+<th>homeCity<th>
+<th>homeState<th>
+<th>totalHours</th>
+</tr>";
+while($row = mysqli_fetch_array($result)) {
+    echo "<tr>";
+    echo "<td>" . $row['Name'] . "</td>";
+    echo "<td>" . $row['ID'] . "</td>";
+    echo "<td>" . $row['Age'] . "</td>";
+    echo "<td>" . $row['email'] . "</td>";
+    echo "<td>" . $row['phoneNumber'] . "</td>";
+    echo "<td>" . $row['homeCity'] . "</td>";
+    echo "<td>" . $row['homeState'] . "</td>";
+    echo "<td>" . $row['totalHours'] . "</td>";
+    echo "</tr>";
+}
+echo "</table>";
+mysqli_close($con);
+?>
+ 
+<br />Volunteers that have worked at the Food Bank: <br />
+<?php
+$q = intval($_GET['q']);
+$con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
+if (!$con) {
+  echo "mysqli_error($con)";
+    die('Could not connect: ' . mysqli_error($con));
+}
+mysqli_select_db($con,"id899930_volunteers");
+$sql="SELECT a.Name, a.ID, a.homeCity, a.homeState, c.eventID, c.eventName FROM id899930_volunteers.volunteers a, id899930_volunteers.schedules b, id899930_volunteers.activities c WHERE a.ID = b.volunteerID AND b.locationID = c.locationID AND c.eventName = "Food Bank"";
+$result = mysqli_query($con,$sql);
+//echo "Connected successfully";
+/*?>echo "
+<div id='filter' class='dataTables_filter'
+<label>
+Search: <input type='search' class placeholder aria-controls='search'>
+</label>
+<div>
+";<?php */
+echo "<table id='myTable' class='display nowrap dataTable dtr-inline' data-searching='true' data-role ='datatable'>
+<tr>
+<th>Name</th>
+<th>ID</th>
+<th>homeCity</th>
+<th>homeState</th>
+<th>eventID</th>
+<th>eventName</th>
+</tr>";
+while($row = mysqli_fetch_array($result)) {
+    echo "<tr>";
+    echo "<td>" . $row['Name'] . "</td>";
+    echo "<td>" . $row['ID'] . "</td>";
+    echo "<td>" . $row['homeCity'] . "</td>";
+    echo "<td>" . $row['homeState'] . "</td>";
+    echo "<td>" . $row['eventID'] . "</td>";
+    echo "<td>" . $row['eventName'] . "</td>";
+    echo "</tr>";
+}
+echo "</table>";
+mysqli_close($con);
+?>
+	
 </body>
 </html>
