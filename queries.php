@@ -18,7 +18,7 @@ $(document).ready(function(){
 });
 </script>
 
-<br />Activities with less than 10 volunteers: <br />
+<br /> <strong>Activities with less than 10 volunteers:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
@@ -56,7 +56,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br />Activities at Location ID 1: <br />
+<br /> <strong>Activities at Location ID 1:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
@@ -94,7 +94,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br />Side Branch Locations: <br />
+<br /> <strong>Side Branch Locations:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
@@ -134,7 +134,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br />Locations in Phoenix: <br />
+<br /> <strong>Locations in Phoenix:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
@@ -174,7 +174,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br />Schedules with event ID 5: <br />
+<br /> <strong>Schedules with event ID 5:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
@@ -214,7 +214,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br />Schedules starting on 11/11/2016: <br />
+<br /> <strong>Schedules starting on 11/11/2016:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
@@ -254,7 +254,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br />Volunteers over age 30: <br />
+<br /> <strong>Volunteers over age 30:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
@@ -300,7 +300,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br />Volunteers who's home state is California: <br />
+<br /> <strong>Volunteers who's home state is California:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
@@ -346,7 +346,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br />Volunteers who worked less than 3 hours: <br />
+<br /> <strong>Volunteers who worked less than 3 hours:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
@@ -388,7 +388,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br />Volunteers who worked at location ID 3: <br />
+<br /> <strong>Volunteers who worked at location ID 3:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
