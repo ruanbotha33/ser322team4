@@ -75,35 +75,35 @@ function showUser(str) {
         </div>
 
         <div class="content">
-   			<form class="pure-form pure-form-aligned" onSubmit="showUser(document.getElementById('firstname').value)">
+   			<form class="pure-form pure-form-aligned" action="process.php" method="post" >
     <fieldset>
         <div class="pure-control-group">
             <label for="firstname">First Name</label>
-            <input id="firstname" type="text" placeholder="First Name">
+            <input name="firstname" type="text" placeholder="First Name">
             <!--<span class="pure-form-message-inline">This is a required field.</span>-->
         </div>
 
         <div class="pure-control-group">
             <label for="lastname">Last Name</label>
-            <input id="lastname" type="text" placeholder="Last Name">
+            <input name="lastname" type="text" placeholder="Last Name">
         </div>
 
         <div class="pure-control-group">
             <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="Email Address">
+            <input name="email" type="email" placeholder="Email Address">
         </div>
 
         <div class="pure-control-group">
             <label for="phonenumber"> Phone Number</label>
-            <input id="phonenumber" type="number" placeholder="Phone Number">
+            <input name="phonenumber" type="number" placeholder="Phone Number">
         </div>
          <div class="pure-control-group">
             <label for="city"> City</label>
-            <input id="city" type="text" placeholder="City">
+            <input name="city" type="text" placeholder="City">
         </div>
          <div class="pure-control-group">
             <label for="State"> State</label>
-            <input id="State" type="text" placeholder="State">
+            <input name="State" type="text" placeholder="State">
         </div>
 
 
