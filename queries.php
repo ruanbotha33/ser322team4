@@ -346,7 +346,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br /> <strong>Volunteers who worked less than 3 hours:</strong> <br />
+<br /> <strong>Volunteers who worked less than 3 hours per day:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
