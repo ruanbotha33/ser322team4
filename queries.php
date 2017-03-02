@@ -103,7 +103,7 @@ if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 mysqli_select_db($con,"id899930_volunteers");
-$sql="SELECT * FROM id899930_volunteers.locations WHERE type = "Side Branch"";
+$sql="SELECT * FROM id899930_volunteers.locations WHERE type = 'Side Branch'";
 $result = mysqli_query($con,$sql);
 //echo "Connected successfully";
 /*?>echo "
@@ -143,7 +143,7 @@ if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 mysqli_select_db($con,"id899930_volunteers");
-$sql="SELECT * FROM id899930_volunteers.locations WHERE city = "Phoenix"";
+$sql="SELECT * FROM id899930_volunteers.locations WHERE city = 'Phoenix'";
 $result = mysqli_query($con,$sql);
 //echo "Connected successfully";
 /*?>echo "
@@ -223,7 +223,7 @@ if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 mysqli_select_db($con,"id899930_volunteers");
-$sql="SELECT * FROM id899930_volunteers.schedules WHERE startDate = "11/11/2016"";
+$sql="SELECT * FROM id899930_volunteers.schedules WHERE startDate = '11/11/2016'";
 $result = mysqli_query($con,$sql);
 //echo "Connected successfully";
 /*?>echo "
@@ -309,7 +309,7 @@ if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 mysqli_select_db($con,"id899930_volunteers");
-$sql="SELECT * FROM id899930_volunteers.volunteers WHERE homeState = "California"";
+$sql="SELECT * FROM id899930_volunteers.volunteers WHERE homeState = 'California'";
 $result = mysqli_query($con,$sql);
 //echo "Connected successfully";
 /*?>echo "
