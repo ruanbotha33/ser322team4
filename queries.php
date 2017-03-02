@@ -430,7 +430,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
 
-<br />Volunteers who have the most hours: <br />
+<br /> <strong>Volunteers who have the most hours:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
@@ -476,7 +476,7 @@ echo "</table>";
 mysqli_close($con);
 ?>
  
-<br />Volunteers that have worked at the Food Bank: <br />
+<br /> <strong>Volunteers that have worked at the Food Bank:</strong> <br />
 <?php
 $q = intval($_GET['q']);
 $con = mysqli_connect('botha.asuscomm.com','ser322team4','Database1','id899930_volunteers');
