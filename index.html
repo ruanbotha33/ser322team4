@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>Responsive Side Menu &ndash; Layout Examples &ndash; Pure</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/layouts/side-menu.css">
+    
+    
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="css/layouts/side-menu.css">
+        <!--<![endif]-->
+        
+        <script>
+/*function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtshow").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtshow").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","getuser.php?q="+str,true);
+        xmlhttp.send();
+    }
+}*/
+</script>
+        
+</head>
+<body>
+
+
+
+
+
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="#">SER 322 Team 4</a>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">New Volunteer</a></li>
+                <li class="pure-menu-item"><a href="lookup.html" class="pure-menu-link">Lookup</a></li>
+                <li class="pure-menu-item"><a href="assign.html" class="pure-menu-link">Assign</a></li>
+                <li class="pure-menu-item"><a href="queries.html" class="pure-menu-link">Queries</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>Index</h1>
+        </div>
+
+        <div class="content">
+        <p> The volunteer database serves as a means to organize and gather information about volunteers and the locations that they are volunteering at. 
+             The volunteers personal information will be stored within the database, as well as information about locations, events, and event schedules. 
+             A user will be able to query the database to gather information such as where a voluteer is scheduled to be, how many hours they have been ther, 
+             where an event is located, the type of event, and other information.</p>
+             <p><b>Team Members:</b></p>
+             <p>
+              Francisco Bencomo<br>
+              Ruan Botha<br>
+              Benjamin Jansen<br>
+              Anthony Meyer<br>
+              Andrew Ralston<br>
+              Jean Torres
+            </p>
+            <p>
+            <b>Tables:</b>
+            </p>
+            <p>
+            Schedules<br>
+            Activities<br>
+            Locations<br>
+            Volunteers<br>
+            VolunteerTime
+            </p>
+        
+        
+		</div>
+
+
+<script src="js/ui.js"></script>
+
+</body>
+</html>
