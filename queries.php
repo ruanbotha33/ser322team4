@@ -485,7 +485,7 @@ if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 mysqli_select_db($con,"id899930_volunteers");
-$sql="SELECT a.Name, a.ID, a.homeCity, a.homeState, c.eventID, c.eventName FROM id899930_volunteers.volunteers a, id899930_volunteers.schedules b, id899930_volunteers.activities c WHERE a.ID = b.volunteerID AND b.locationID = c.locationID AND c.eventName = "Food Bank"";
+$sql="SELECT a.Name, a.ID, a.homeCity, a.homeState, c.eventID, c.eventName FROM id899930_volunteers.volunteers a, id899930_volunteers.schedules b, id899930_volunteers.activities c WHERE a.ID = b.volunteerID AND b.locationID = c.locationID AND c.eventName = 'Food Bank'";
 $result = mysqli_query($con,$sql);
 //echo "Connected successfully";
 /*?>echo "
