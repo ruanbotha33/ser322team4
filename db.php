@@ -10,12 +10,13 @@
 <?php
 class db
 {
-public $host;
+	public $host;
     public $user;
     public $pass;
     public $data;
     public $con;
     public $table;
+	
     function db()
     {
         $this->host="botha.asuscomm.com";
@@ -25,26 +26,27 @@ public $host;
     }   
     public function connect()
     {
-        $this->con=mysql_connect($this->host,$this->user,$this->pass);
-        if(!$this->con)
-        {
-            echo mysql_error();
-        }
-        $sel=mysql_select_db($this->data, $this->con);
-        if(!$sel)
-        {
-            echo mysql_error();
-        }
+		$this->con = mysqli_connect($this->host,$this->user,$this->pass,$this->data);
+       	if (!$this->con) {
+			echo "mysqli_error($this->con)";
+   	 		die('Could not connect: ' . mysqli_error($this->con));
+		}
+        mysqli_select_db($this->con,"id899930_volunteers");
     }
     public function insert($name,$age,$email,$phone,$city,$state)
     {
     	//Edit this to match your query
-        $sql=mysql_query("INSERT INTO volunteers(Name,Age,email,phoneNumber,homeCity,homeState,totalHours) VALUES('$name', '$age','$email','$phone','$city','$state')");
+        $sql=mysqli_query($this->con,"INSERT INTO volunteers(Name,ID,Age,email,phoneNumber,homeCity,homeState,totalHours) VALUES('$name',DEFAULT, 													'$age','$email','$phone','$city','$state',0)");
         if(!$sql)
         {
-            echo mysql_error();
+            echo mysqli_error($this->con);
         }
+		if($sql)
+            header('Location:http://ser-322team4.000webhostapp.com/newvolunteer.html?msg=added successfully');
+			
+		mysqli_close($this->con);
     }
+	
 }
 ?>
 
